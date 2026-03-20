@@ -95,6 +95,29 @@ function toSection4(){section2.style.display="none";section4.style.display="flex
 function toSection5(){section4.style.display="none";section5.style.display="flex";}
 
 function createRow(id){
+  let r = document.getElementById("row"+id);
+
+  // CLEAR before adding (important)
+  r.innerHTML = "";
+
+  for(let i=0;i<5;i++){
+    let d = document.createElement("div");
+    d.className = "polaroid";
+
+    // FORCE visibility
+    d.style.display = "block";
+    d.style.background = "white";
+
+    let img = document.createElement("img");
+    img.src = "images/image" + ((id-1)*5 + i + 1) + ".png";
+    img.style.width = "100%";
+    img.style.height = "100%";
+    img.style.objectFit = "cover";
+
+    d.appendChild(img);
+    r.appendChild(d);
+  }
+}
   let r=document.getElementById("row"+id);
   if(r.children.length===0){
     for(let i=0;i<5;i++){
