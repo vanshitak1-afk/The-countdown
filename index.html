@@ -101,13 +101,13 @@ function createRow(id){
       let d = document.createElement("div");
       d.className = "polaroid";
 
-      let img = document.createElement("img");
-      img.src = "image" + ((id-1)*5 + i + 1) + ".jpg";
+      let img = document.createElement("image");
+      img.src = "image" + ((id-1)*5 + i + 1) + ".png";
       img.style.width = "100%";
       img.style.height = "100%";
       img.style.objectFit = "cover";
 
-      d.appendChild(img);
+      d.appendChild(imgage);
       r.appendChild(d);
     }
   }
