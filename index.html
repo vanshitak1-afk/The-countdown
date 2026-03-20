@@ -118,8 +118,10 @@ const startDate = new Date("2026-03-22T23:59:00");
 function attemptReveal(){
   const now = new Date();
   if(now < startDate) return;
+  // TEMPORARY: force enable reveal for testing
+const hoursPassed = 100;
 
-  const hoursPassed = (now - startDate)/(1000*60*60);
+  //const hoursPassed = (now - startDate)/(1000*60*60);
 
   if(hoursPassed >= 9) createRow(1);
   if(hoursPassed >= 33) createRow(2);
