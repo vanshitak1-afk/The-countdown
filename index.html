@@ -116,6 +116,13 @@ function createRow(id){
 const startDate = new Date("2026-03-22T23:59:00");
 
 function attemptReveal(){
+  createRow(1);
+  createRow(2);
+  createRow(3);
+
+  // show gift also for testing
+  document.getElementById("giftBox").style.display = "block";
+}
   const now = new Date();
   if(now < startDate) return;
   // TEMPORARY: force enable reveal for testing
@@ -182,6 +189,7 @@ function blowCandle(){
     text.style.display="block";
   },500);
 }
+  window.onload = attemptReveal;
 </script>
 
 </body>
