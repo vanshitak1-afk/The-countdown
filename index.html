@@ -89,7 +89,9 @@ const section4 = document.getElementById("section4");
 const section5 = document.getElementById("section5");
 const grid = document.getElementById("grid");
 
-function lightOn(){section1.style.display="none";spotlight.style.display="flex";}
+function lightOn(){
+  document.getElementById("section1").style.display = "none";
+  document.getElementById("spotlight").style.display = "flex";}
 function toSection2(){spotlight.style.display="none";section2.style.display="flex";}
 function toSection4(){section2.style.display="none";section4.style.display="flex";createGifts();}
 function toSection5(){section4.style.display="none";section5.style.display="flex";}
@@ -212,7 +214,10 @@ function blowCandle(){
     text.style.display="block";
   },500);
 }
-  window.onload = attemptReveal;
+  window.onload = function(){
+  console.log("Page Loaded ✅");
+  attemptReveal();
+};
 </script>
 
 </body>
